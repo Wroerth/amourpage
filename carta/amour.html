@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Scroll Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="backgroundMusic" src="../music/escalera.mp3" loop></audio>
+
+    <div id="perspectiva">
+        <div id="contenedor">
+            <div class="cara frontal">
+                <h1>Tan hermosa que me delata mi brillo</h1>
+            </div>
+            <div class="cara trasera">
+                <div id="abrir"></div>
+                <div id="partes"></div>
+                <div id="carta">
+                    <hgroup>
+                        <h1>Eres mi alegrida en este mundo</h1>
+                        <h2></h2>
+                    </hgroup>
+                    <p>...Entonces, contra toda lógica, contra todas las probabilidades, nos enamoramos. Fue un amor que creció silenciosamente, pacientemente, hasta que un día, al mirarnos a los ojos, supimos que lo que teníamos era real. "Debo estar soñando", pensé. Pero no, no era un sueño. Era la realidad más hermosa que jamás hubiera imaginado, una realidad en la que tú y yo éramos los protagonistas de nuestra propia historia de amor.
+                        Ahora, al mirar hacia atrás, veo que cada paso que dimos fue un paso hacia este amor que ahora compartimos. Un amor que es tanto un refugio como una aventura, tanto un misterio como una certeza. Un amor que es, en todos los sentidos, un sueño hecho realidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        var audio = document.getElementById("backgroundMusic");
+
+        // Event listener para reproducir música cuando la página está completamente cargada
+        window.addEventListener('load', function() {
+            playMusic();
+        });
+
+        // Función para reproducir música
+        function playMusic() {
+            audio.play().catch(error => {   
+                console.log("Error playing audio: ", error);
+            });
+        }
+    </script>
+    <script>
+        var audio = new Audio('../music/escalera.mp3');
+        audio.play().catch(error => {   
+            console.log("Error playing audio: ", error);
+        });
+    </script>
+    
+</body>
+</html>

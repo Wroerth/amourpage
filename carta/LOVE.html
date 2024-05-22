@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Scroll Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="backgroundMusic" src="../music/escalera.mp3" loop></audio>
+
+    <div id="perspectiva">
+        <div id="contenedor">
+            <div class="cara frontal">
+                <h1>CON TODO MI AMOR<br><span>PARA MI AMADA DIANA<br>❤️</span></h1>
+            </div>
+            <div class="cara trasera">
+                <div id="abrir"></div>
+                <div id="partes"></div>
+                <div id="carta">
+                    <hgroup>
+                        <h1>Diana, mi deslumbrante amor</h1>
+                        <h2></h2>
+                    </hgroup>
+                    <p>Recuerdo claramente aquel instante, aquel preciso momento en que mis ojos se posaron sobre ti. Fue un encuentro fortuito, uno de esos raros giros del destino que uno nunca espera pero siempre anhela. "Tengo que conocerte", pensé, con una certeza que me sorprendió tanto como me emocionó. Había algo en tu presencia, una chispa de algo maravilloso y desconocido, que me llamaba con una promesa silenciosa de algo más.<br>
+                        Al conocerte, descubrí que cada palabra que intercambiamos, cada sonrisa que compartimos, era un paso más hacia un futuro que ambos deseábamos explorar. "Ojalá nos enamoraremos", me encontré pensando. No era solo un deseo, sino una posibilidad que parecía cobrar vida con cada momento que pasábamos juntos. Era como si cada risa fuera un eco de la felicidad que podríamos construir, como si cada conversación tejiera los hilos de un vínculo más profundo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        var audio = document.getElementById("backgroundMusic");
+
+        window.addEventListener('load', function() {
+            if (localStorage.getItem('playAudio') === 'true') {
+                localStorage.removeItem('playAudio');
+                audio.play().then(() => {
+                    console.log("Audio is playing");
+                }).catch(error => {
+                    console.log("Error playing audio: ", error);
+                });
+            }
+        });
+    </script>
+    <script>
+        var audio = new Audio('../music/escalera.mp3');
+        audio.play().catch(error => {   
+            console.log("Error playing audio: ", error);
+        });
+    </script>
+    
+</body>
+</html>

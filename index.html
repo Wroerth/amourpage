@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>FLORES</title>
+</head>
+<body>
+
+    <div class="greetings">
+        <span>⋆</span>
+        <span>M</span>
+        <span>I</span>
+        <span>~<br></span>
+        <span>V</span>
+        <span>I</span>
+        <span>D</span>
+        <span>A</span>
+        <span>⋆</span>
+    </div>
+
+    <div class="greetings">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="description">
+        <span>En cada latido, un susurro de amor eterno.</span>
+    </div>
+
+    <div class="button-container">
+        <div class="button">
+            <button onclick="navigateTo('FLORES.html')">
+                🌸🌼 DIANA, MI FLOR FAVORITA 🌻🌹
+            </button>
+        </div>
+        <div class="button-group">
+            <div class="button">
+                <button onclick="navigateTo('carta/LOVE.html')">
+                    ❤️ O EU AMO COM<br> TODO O MEU AMOR<br> ❤️
+                </button>
+            </div>
+            <div class="button">
+                <button onclick="navigateTo('carta/amour.html')">
+                    ❤️ TI AMO CON<br> TUTTO IL MIO ESSERE ❤️
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <audio id="audio" src="music/escalera.mp3" loop></audio>
+
+    <script>
+        var audio = document.getElementById('audio');
+
+        document.body.addEventListener('click', function() {
+            audio.play();
+        }, { once: true });
+
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
