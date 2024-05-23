@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
-
 </head>
 <body class="container">
-    <audio id="backgroundMusic" src="../music/escalera.mp3" loop></audio>
+    <audio id="backgroundMusic" src="music/escalera.mp3" loop></audio>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -311,10 +310,12 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="flores.css">
     <script>
-        var audio = new Audio('../music/escalera.mp3');
-        audio.play().catch(error => {   
-            console.log("Error playing audio: ", error);
+        window.addEventListener('DOMContentLoaded', function() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play().catch(error => {
+                console.log("Error playing audio: ", error);
+            });
         });
     </script>
-  </body>
+</body>
 </html>
