@@ -9,8 +9,8 @@
     <title>FLORES</title>
 
 </head>
-<body><audio id="backgroundMusic" src="music/Y2meta.app - Camilo, El Alfa - BEBÉ (Official Video) (128 kbps).mp3" loop></audio></body>
 <body class="container">
+    <audio id="backgroundMusic" src="../music/escalera.mp3" loop></audio>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -309,6 +309,12 @@
       </div>
     </div>
     <script src="main.js"></script>
-    <link rel="stylesheet" href="flores.css">  
+    <link rel="stylesheet" href="flores.css">
+    <script>
+        var audio = new Audio('../music/escalera.mp3');
+        audio.play().catch(error => {   
+            console.log("Error playing audio: ", error);
+        });
+    </script>
   </body>
 </html>
